@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .logo {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+        }
+
+        .logo img {
+            width: 33%;
+            border: solid white;
+            border-radius: 50px;
+            text-align: left;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+            text-align: left;
+        }
+
+
+        .nav-list {
+            width: 70%;
+
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            align-items: center;
+        }
+
+        .nav-list li {
+            list-style: none;
+            padding: 23px 29px;
+            text-align: left;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Roboto Slab', serif;
+            font-size: 15px;
+            text-align: left;
+        }
+
+        .nav-list li a:hover {
+            color: lightblue;
+        }
+
+        .background {
+            background: rgba(0, 0, 0, 0.7) url('5.jpg');
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .firstsection {
+            color: black;
+            height: 140vh;
+        }
+
+        .box-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: auto;
+            max-width: 80%;
+            height: 64%;
+        }
+
+        .firsthalf {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .secondhalf {
+            width: 30%;
+        }
+
+        .secondhalf img {
+            width: 80%;
+            border: 4px solid white;
+            border-radius: 500px;
+            display: block;
+            margin: auto;
+        }
+
+        .text-big {
+            font-size: 30px;
+            color: white;
+        }
+
+        .text-small {
+            font-size: 18px;
+            color: white;
+        }
+
+        .text-footer {
+            text-align: center;
+            font-family: 'Roboto Slab', serif;
+            display: flex;
+            justify-content: center;
+            padding: 30px 0;
+            color: white;
+        }
+
+        .card {
+            height: 30%;
+        }
+
+        Body {
+            font-family: 'Roboto Slab', serif;
+            background-size: cover;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-right: 0px;
+            width: 30%;
+            margin-left: 40%;
+            height: 30%;
+        }
+
+        .button1 {
+            padding: 15px;
+            margin-right: 10px;
+            color: black;
+            background-color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .button1:hover {
+            position: cursor;
+            background-color: rgb(239, 171, 43);
+            color: white;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .card2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 130px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .firstsection {
+            background: rgba(0, 0, 0, 0.7) url('5.jpg');
+            background-size: cover;
+        }
+
+        .about {
+            background: linear-gradient(90deg, lightblue, white,lightblue);
+            text-align: center;
+        }
+
+        .department {
+            background: linear-gradient(90deg, lightblue, white,lightblue);
+            text-align: center;
+        }
+
+        .department li {
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .faculty {
+            text-align: center;
+            background: linear-gradient(90deg, lightblue, white,lightblue);
+        }
+
+        .research {
+            text-align: center;
+            background: linear-gradient(90deg, lightblue, white,lightblue);
+        }
+
+        .placement {
+            text-align: center;
+            background: linear-gradient(90deg, lightblue, white,lightblue);
+        }
+
+        .contact {
+            text-align: center;
+            background: linear-gradient(90deg, lightblue, white,lightblue);
+        }
+    </style>
+    <title>Eclg</title>
+</head>
+
+<body>
+    <nav class="navbar background h-nav-resp">
+        <ul class="nav-list v-class-resp">
+            <div class="logo"><img src="4.png" alt="logo"></div>
+            <li> <a href="#home"> Home </a> </li>
+            <li> <a href="#about"> About </a> </li>
+            <li> <a href="#department"> Department </a> </li>
+            <li> <a href="#faculty"> Faculty </a> </li>
+            <li> <a href="#research"> Research </a> </li>
+            <li> <a href="#placement"> Placement </a> </li>
+            <li> <a href="#contact"> Contact Us </a> </li>
+        </ul>
+    </nav>
+
+    <section class="background firstsection" id="home">
+        <div class="box-main">
+            <div class="firsthalf">
+                <p class="text-big">Welcome to our Engineering College!</p>
+                <br>
+                <p class="text-small">CBS Group of Institutions has been established with an aim to give new direction to Engineering &
+                    professional education and has been approved by AICTE, Ministry of Human Resource Development, Govt. of
+                    India and affiliated to Maharshi Dayanand University, approved by UGC for conducting the 4 year full time
+                    B.Tech program in ME, CE, ECE, CSE, & EE, 3 year Full time programme in BBA, BCA, MCA and 2 year full time
+                    programme in M.Tech in ME, ECE, CSE, MBA and PGDM. </p>
+                <br>
+
+                <div class="button-container">
+                    <a class="button1" href="">Register Now</a>
+                </div>
+            </div>
+            <div class="secondhalf">
+                <img src="3.jpg" alt="graduation">
+            </div>
+        </div>
+
+
+    </section>
+
+    <hr>
+
+    <section class="about" id="about">
+        <br><br>
+        <h2>
+            About Us
+        </h2><br><br>
+        <p>CBS Group of Institutions is all set to unleash a new era in the education sector of India by offering a much
+            needed distinctive education platform to thousands of students to launch their successful careers.
+
+            CBS Group of Institutions has been established with an aim to give new direction to Engineering &
+            professional education and has been approved by AICTE, Ministry of Human Resource Development, Govt. of
+            India and affiliated to Maharshi Dayanand University, approved by UGC for conducting the 4 year full time
+            B.Tech program in ME, CE, ECE, CSE, & EE, 3 year Full time programme in BBA, BCA, MCA and 2 year full time
+            programme in M.Tech in ME, ECE, CSE, MBA and PGDM. It has been 3 glorious years since the inception of CBS
+            Group of Institutions. It has established all the Labs necessary for conducting the practical as per AICTE
+            norms & University curriculum. All the labs & workshop have been equipped with state-of-art equipments and
+            accessories. World class infrastructure has been provided with the complete facilities like lecture rooms,
+            well stocked library with latest journals, separate hostel facility for boys and girls, sports & recreation
+            zone and cafeteria etc. are in place so as to conduct the curriculum and all other extra and co-curricular
+            activities smoothly.
+
+        </p>
+        <br><br>
+
+    </section>
+    <hr>
+
+    <section class="department" id="department">
+        <br><br>
+        <h2>
+            Departments we have!!
+        </h2><br><br>
+        <li>Computer Engineering</li>
+        <li>Civil Engineering</li>
+        <li>IT Engineering</li>
+        <li>Mechanical Engineering</li>
+        <li>EnTC Engineering</li>
+        <br><br>
+
+    </section>
+    <hr>
+
+    <section class="faculty" id="faculty">
+        <br><br>
+        <h2>
+            Faculty we have!!
+        </h2><br><br>
+        <div class="card">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="6.webp" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Mr. Ronaldo</h1>
+                        <p>Data Structures</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="7.webp" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Mr. Raman Sharma</h1>
+                        <p>Operating System</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="10.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Ms. Briganza</h1>
+                        <p>Mathematics</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="8.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Mr. Prashant Reddy</h1>
+                        <p>IOT</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="9.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Ms. Alize</h1>
+                        <p>Machine Learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+
+    </section>
+    <hr>
+
+    <section class="research" id="research">
+        <br><br>
+        <h2>
+            Research
+        </h2><br><br>
+        <p>As a major, comprehensive university we conduct research of the highest standard across a broad spectrum of
+            disciplines.
+            Our discipline-specific research is impressive but we also focus on challenging our researchers to explore
+            the space between traditional disciplines, creating transformational discoveries that enrich society.
+
+        </p>
+        <br><br>
+
+    </section>
+    <hr>
+
+    <section class="placement" id="placement">
+        <br><br>
+        <h2>
+            Placement
+        </h2><br><br>
+        <p>The Department of Training & Placement is the backbone of any institute. From the very beginning the
+            institute lays greater emphasis on industrial training, practical training for Engineering and Management
+            students. The students are introduced to industrial practices through training in the institute workshops
+            and in factories, installation works etc.
+
+            The Training and Placement Cell of the institute centrally handles campus placement of the Engineering and
+            Management students. The cell provides complete support to the visiting companies at every stage of
+            placement process. Arrangements for pre-placement talks, written tests, interviews and group discussions are
+            made as per the requirement of the visiting companies.
+
+        </p>
+        <br><br>
+
+    </section>
+    <hr>
+
+
+    <section class="contact" id="contact">
+        <br><br>
+        <h2>
+            Contact Us
+        </h2><br><br>
+        <p>If you have any questions or queries, please feel free to contact us at:</p>
+
+        <p>National Engineering College</p>
+        <p>Indore</p>
+        <p>India</p>
+        <p>Phone: 222-5673-8567</p>
+        <p>Email: college@medicaps.org </p>
+
+        <br><br>
+
+    </section>
+    <hr>
+
+    <footer class="background">
+        <p class="text-footer">
+            Copyright &copy; 2027 www.medicaps.com - All rights reserved
+        </p>
+    </footer>
+</body>
+
+</html>
